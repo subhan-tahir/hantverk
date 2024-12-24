@@ -217,8 +217,8 @@ li {
 .wrappered {
     background-color: var(--SecondaryColor);
     padding: 10px;
-    width: 100%;
-    height: 100%;
+      width: 100%;
+    /*height: 100%;*/
     position: relative;
 
 }
@@ -344,25 +344,29 @@ form>.field-box {
     display: block;
 }
 
-.field-box:last-child button {
+.field-box:last-child button{
     border: 0;
-    cursor: pointer;
-    padding: 17px 28px;
-    outline: none;
-    border-radius: 8px;
-    font-weight: bold;
-    color: var(--SecondaryColor);
-    font-family: "Poppins", sans-serif;
-    border: 1px solid white;
-}
 
-.field-box:last-child button:last-child {
+  
+}
+.field-box:last-child a{
+    padding: 17px 28px;
+    border: 1px solid white;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;    
+    font-weight: bold;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+}
+.field-box:last-child a:last-child {
     background-color: transparent;
     color: white;
     margin-left: 10px;
 }
 
-.field-box:last-child button:last-child a {
+.field-box:last-child a:last-child {
     color: white;
 }
 
