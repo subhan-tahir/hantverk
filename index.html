@@ -36,6 +36,7 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="About.html">About</a></li>
                         <li><a href="Contact.html">Contact</a></li>
+                        <li  class="d-none"><a href="Profile.html">Profile</a></li>
                     </ul>
                 </div>
                 <div class="dropdown">
@@ -67,7 +68,7 @@
                 <i class="fa-solid fa-bars"></i>
             </button>
             <div class="nav-logo-box">
-                <img src="images/logo.png" alt="nav-logo">
+                <a href="/"><img src="images/logo.png" alt="nav-logo"></a>
             </div>
             <div class='nav-right-box'>
                 <div class="nav-items-box">
@@ -256,11 +257,12 @@
 
         let activePage = window.location.pathname;
         let navLinks = document.querySelectorAll('.nav-items-box a , footer a, .side-items-box a');
-        navLinks.forEach((link, i) => {
-            if (link.href.includes(activePage)) {
+
+        navLinks.forEach((link) => {
+            let linkPath = new URL(link.href).pathname; // Extract pathname from href
+            if (linkPath === activePage) { // Strict comparison
                 link.classList.add('active');
             }
-
         });
 
         // let languageDropdown = document.querySelector('.dropdown');
@@ -290,23 +292,23 @@
 
 
             let languageItems = document.querySelectorAll('.menu li');
-           
-            
+
+
             languageItems.forEach((item, i) => {
                 item.addEventListener('click', () => {
                     // let parentMenu =  item.closest('.menu');
                     let itemValue = item.querySelectorAll('li a')[0];
                     let selectText = toggleBtn.querySelector('.select-item span');
-                    
-                    
-                    
+
+
+
                     //   itemValue.innerText = itemValue.innerText.slice(0,3);
 
                     // // console.log(selectText);
 
                     selectText.textContent = itemValue.textContent.slice(0, 3);
                     // console.log(parentMenu);
-                    
+
 
                 })
             })

@@ -530,4 +530,7 @@ footer>p>a {
     .nav-icons-box{
         display: none;
     }
+    .side-items-box ul li:last-child{
+        display: block !important;
+    }
     }
